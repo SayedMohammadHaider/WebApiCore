@@ -103,7 +103,6 @@ namespace WebApplicationApiPractice.Controllers
             catch (Exception ex)
             {
                 return BadRequest();
-
             }
         }
     }
