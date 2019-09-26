@@ -18,6 +18,11 @@ namespace WebApplicationApiPractice.Controllers
             this.context = context;
         }
 
+        /// <summary>
+        /// Create New Product
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Add(Product product)
         {
@@ -33,6 +38,11 @@ namespace WebApplicationApiPractice.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete Product By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
         {
@@ -56,6 +66,10 @@ namespace WebApplicationApiPractice.Controllers
             
         }
 
+        /// <summary>
+        /// Get List of Products
+        /// </summary>
+        /// <returns></returns>
         [Produces("application/json")]
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -72,6 +86,11 @@ namespace WebApplicationApiPractice.Controllers
 
         }
 
+        /// <summary>
+        /// Get Product Details By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(long id)
         {
@@ -87,6 +106,11 @@ namespace WebApplicationApiPractice.Controllers
             }            
         }
 
+        /// <summary>
+        /// Update Product by Id
+        /// </summary>
+        /// <param name="productChanges"></param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IActionResult> Update(Product productChanges)
         {
